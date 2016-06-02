@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<img src="‪‪bulbon.jpg">
+<div onmouseover="mover(this)" onmouseout="mout(this)" style="font-size=50px;">My First Web Page</div>
+<p id="hello">My first paragraph.?</p>
+
+<script>
+var today="27/10/15";
+function mover(onj){
+onj.innerHTML="hiii"
+}
+fucntion mout(obj){
+obj.innerHTML="fuck off"
+}
+function showdate(){
+	document.body.style.backgroundColor="red";
+	document.getElementById("hello").innerHTML = today;
+	}
+function red(){   	 	
+	document.body.style.backgroundColor="red";
+}
+function white(){
+	document.body.style.backgroundColor="white";
+}
+function toupc(x)
+{
+	x.style.background-color ="yellow";
+	
+}
+</script>
+<input id="fname" type="text" onfocus="toupc(this)" name="name">
+<button name="red" onclick="this.innerHTML=Date()"> hello </button>
+<button onclick="white()"> back to white </button>
+</body>
+</html> 
