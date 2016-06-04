@@ -1,0 +1,43 @@
+<?php
+session_start();
+?>
+<!DOCTYPE HTML> 
+<html>
+<head>
+<style>
+div{
+	position:absolute;
+	left:500px;
+	top:220px;
+	border-style:dotted;
+	border-color:white;
+	border-width:5px;
+	font-size:20px;
+	padding:20px 10px 20px 30px;
+	color:red;
+	width:15%;
+	text-align:ceter;
+}</style>
+<title>PROGYM Register</title>
+</head>
+<body background=".\images\251038.jpg">
+<a href="home.html"><img style="position:absolute; left:400px;" src=".\images\register.jpg"></a>
+<h1 style="color:yellow;position:absolute; top:150px; left:550px;">REGISTER</h1>
+<form method="POST" action="register_php.php">
+<div>
+Name<br>
+<input type="text" name="name"><br>
+Age<br>
+<input type="text" name="age"><br>
+Email<br>
+<input type="email" name="email"><br>
+Mobile Number<br>
+<input type="text" name="mobile"><br>
+Password<br>
+<input type="password" name="pass"><br>
+Confirm Password <br>
+<input type="password" name="cpass"><br><br>
+<input id="button" type="submit" name="register" value="Register">
+</div>
+</form>
+</body>

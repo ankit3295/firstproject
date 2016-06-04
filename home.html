@@ -1,0 +1,58 @@
+<?php
+
+if(isset($_SESSION['username'])){
+header("location: profile.php");
+}
+
+?>
+<!DOCTYPE HTML> 
+<html>
+<head>
+<style>
+a{
+	text-decoration: none;
+}
+a:hover{
+			color:hotpink;
+}
+a:visited{
+	color:red;
+}
+li{
+	margin-left:50px;
+	display:inline;
+	color:blue;
+	font: italic bold underline 18px times new roman;
+}
+</style>
+<script>
+function form(){
+var ele = document.getElementById("hello")
+ele.innerHTML="wassup";
+}
+</script>	
+<title>PROGYM</title>
+</head>
+<body background=".\images\251038.jpg">
+<ul>
+<li><a id="hello" href="about_us.html">About Us</a></li>
+<li><a href="trainers.html">Trainers</a></li>
+<li><a href="contactus.html">Contact Us</a></li>
+</ul>
+<a href="home.html"><img style="position:absolute; left:400px;" src=".\images\logoprogym.png"></a>
+<p style="position:absolute; left:650px; top:355px;">
+<button><a href="register.html">Register</a></button></p>
+<form onfocus="form()" method="POST" action="sign_in.php">
+<table border="1" style=" position:absolute; left:500px; top:300px; color:red;">
+<tr>
+<td>Mobile No.</td>
+<td><input type="tel" name="mobile"></td>
+</tr>
+<tr>
+<td>Password</td><td><input type="password" name="pass"></td>
+</tr>
+</table>
+<input style="position:absolute; left:550px; top:370px;" id="button" type="submit" name="submit" value="Sign-In">
+</form>
+</body>
+</html>

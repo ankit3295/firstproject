@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+body{
+color:white;
+}
+li{
+	margin-left:40px;
+	margin-top:px;
+	display:inline;
+	color:blue;
+	font: italic bold underline 18px times new roman;
+}
+a:hover{
+			color:hotpink;
+}
+a{
+	text-decoration:none;
+}
+a:visited{
+	color:red;
+}
+ol{
+    display: block;
+    list-style-type: decimal;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 40px;
+}
+</style>
+<title>
+maps
+</title>
+<script
+src="http://maps.googleapis.com/maps/api/js">
+</script>
+
+<script>
+function initialize() {
+  var mapProp = {
+    center:new google.maps.LatLng(51.508742,-0.120850),
+    zoom:5
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+</head>
+<body background=".\images\251038.jpg">
+<ul>
+<li><a href="about_us.html">About Us</a></li>
+<li><a href="trainers.html">Trainers</a></li>
+<li><a href="contactus.html">Contact Us</a></li>
+</ul>
+<a href="home.html"><img style="position:absolute; left:400px; top:20px;" src=".\images\logoprogym.png"></a>
+<div id="googleMap" style="width:500px;height:380px;"></div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<?php
+
+	include("session.php");
+?>
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+body{
+	color:blue;
+	
+}
+h3{
+	position:absolute;
+	left:650px;
+	top:400px;
+}
+a:hover{
+	color:hotpink;
+}
+a{
+	color:none;
+	display:block;
+	background-color:yellow;
+}
+div{
+	border-style:inset;
+	border-width:5px;
+	border-color:black;
+	float:left;
+	margin-left:20px;
+	margin-top:170px;
+}
+ul{
+list-style-type:none;
+margin:0;
+padding:0;
+}
+li{
+margin:10px 5px 30px 10px;}
+</style>
+<title>
+</title>
+</head>
+<body background=".\images\cutout.jpg">
+<p>Welcome <p><?php echo $login_name;?>
+<div>
+<ul>
+<li><a href="Personal_info.html">Personal Information</a></li>
+<li><a href="Gym Info.html">Gym Information</a></li>
+<li><a href="Workout.html">Workout Details</a></li>
+</ul>
+</div>
+<img style="margin-left:200px;" src=".\images\logoprogym.png">
+</body>
+</html>

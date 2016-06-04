@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+li{
+	margin-left:40px;
+	margin-top:px;
+	display:inline;
+	color:blue;
+	font: italic bold underline 18px times new roman;
+}
+</style>
+<script
+src="http://maps.googleapis.com/maps/api/js">
+</script>
+
+<script>
+		var A=new google.maps.LatLng(28.5875609,77.16900669999995);
+		
+		var directionsService = new google.maps.DirectionsService;
+		var directionsDisplay = new google.maps.DirectionsRenderer;
+function initialize() {
+  var mapPropA = {
+    center:A,
+    zoom:15,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"), mapPropA);
+	marker = new google.maps.Marker({map: map,position: A });
+	infowindow = new google.maps.InfoWindow({content:'<strong>A</strong><br>4 & 5, Ground Floor,Satya Niketan, New Delhi, Delhi 11002<br>'});
+	google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});
+	infowindow.open(map,marker);
+	
+	/*var mapPropB = {
+    center:B,
+    zoom:7,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  
+	var mapB=new google.maps.Map(document.getElementById("googleMap"), mapPropB);
+	marker = new google.maps.Marker({map: mapB,position: B });
+	infowindow = new google.maps.InfoWindow({content:'<strong>B</strong><br>35-B, 1st Floor, Pusa Road,  Opp Pillar No. 124, New Delhi, Delhi 110005<br>'});
+	google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});
+	infowindow.open(map,marker);*/
+}
+	
+	google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+</head>
+
+<body background=".\images\251038.jpg">
+<ul>
+<li><a href="about_us.html">About Us</a></li>
+<li><a href="trainers.html">Trainers</a></li>
+<li><a href="contactus.html">Contact Us</a></li>
+</ul>
+<a href="home.html"><img style="position:absolute; left:400px; top:20px;" src=".\images\logoprogym.png"></a>
+
+<div id="googleMap" style="width:800px;height:450px; margin:150px 50px 50px 250px;"></div>
+
+</body>
+</html>

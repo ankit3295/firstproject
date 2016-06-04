@@ -1,0 +1,68 @@
+<?php
+include("session.php");
+?>
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+body{
+	color:blue;
+	
+}
+h2{
+	position:absolute;
+	left:1120px;
+	top:40px;
+	color:red;
+}
+a:hover{
+	color:hotpink;
+}
+a{
+	color:none;
+	display:block;
+	background-color:yellow;
+}
+#nav{
+	border-style:inset;
+	border-width:5px;
+	border-color:black;
+	float:left;
+	margin-left:20px;
+	margin-top:170px;
+}
+#pi{
+	border-style:inset;
+	border-width:5px;
+	border-color:black;
+}
+ul{
+list-style-type:none;
+margin:0;
+padding:0;
+}
+li{
+margin:10px 5px 30px 10px;}
+</style>
+<title>
+</title>
+</head>
+<body background=".\images\cutout.jpg">
+<h2>Welcome, <br> <?php echo $login_name; ?> </h2>
+<div id="nav">
+<ul>
+<li><a href="Personal_info.html">Personal Information</a></li>
+<li><a href="Gym Info.html">Gym Information</a></li>
+<li><a href="Workout.html">Workout Details</a></li>
+<li><a href="logout.html">Logout</a></li>
+</ul>
+</div>
+<img style="margin-left:200px;" src=".\images\logoprogym.png">
+<div id="pi">
+<h3>Name : </h3><?php echo $login_name; ?></h3></br>
+<h3>Email Id : </h3><?php echo $login_email; ?></h3></br>
+<h3>Mobile No. : </h3><?php echo $login_mobileno; ?></h3></br>
+<h3>Age : </h3><?php echo $login_age; ?></h3></br>
+</div>
+</body>
+</html>

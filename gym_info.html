@@ -1,0 +1,68 @@
+<?php
+include("session.php");
+?>
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+#gym{
+	border-style:dotted;
+	border-width:5px;
+	padding: 2px 2px 0 2px;
+	position:absolute;
+	left:500px;
+	top:200px;
+}
+ul{
+list-style-type:none;
+margin:0;
+padding:0;
+}
+li{
+	margin:10px 5px 30px 20px;
+}
+#welcome{
+	position:absolute;
+	left:1120px;
+	top:40px;
+	color:red;
+}
+a:hover{
+	color:hotpink;
+}
+a{
+	color:none;
+	display:block;
+	background-color:yellow;
+}
+#nav{
+	border-style:inset;
+	border-width:5px;
+	border-color:black;
+	float:left;
+	margin-left:30px;
+	margin-top:170px;
+}
+</style>
+<title>
+</title>
+</head>
+<body background=".\images\251038.jpg">
+<h2 id="welcome">Welcome, <br> <?php echo $login_name; ?> </h2>
+<img style="margin-left:200px;" src=".\images\Logo-Progym.jpg">
+<div id="nav">
+<ul>
+<li><a href="personal_info.html">Personal Information</a></li>
+<li><a href="gym_info.html">Gym Information</a></li>
+<li><a href="workout.html">Workout Details</a></li>
+<li><a href="logout.html">Logout</a></li>
+</ul>
+</div>
+<div id= gym>
+<ul>
+<li><a href="chooseplan.html">Choose Plan</a></li>
+<li><a href="choosetraiin.html">Choose Trainers</a></li>
+</ul>
+</div>
+</body>
+</html>
