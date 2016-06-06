@@ -4,69 +4,109 @@
 <title>
 Mentoring System
 </title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 <style>
+ul {
 
-ul{
-	position:absolute;
-	top:0px;
-	left:0px;	
-	list-style-type:none;
-	overflow:hidden;
-	margin:0px 0px 0px 0px;
-	padding:0;
-	background-color:gray;
-	width:100%;	
+	width:100%
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
 }
-li{
-	
-	float:left;
+
+li {
+    float: left;
 }
-li a{
-	
-	width:100%;
-	color:white;
-	display:block;
-	background-color:gray;
-	padding:5px 5px 5px 5px;
-	text-align:center;
-	text-decoration:none;
-	font-size:20px;
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
-li a:hover{
-	
-	color:blue;
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
 }
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
+
 div.logo {
 
-	width:25%;
+	width:12%;
 	margin:50px 5px 5px 5px;
 	border: 3px dotted black;
     background-color: white;
     box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 0px 20px 0 rgba(0, 0, 0, 0.19);
 	
 }
-#heading {
-	
-	position:absolute;
-	top:0px;
-	ledt:0px;
-	width:100%;
-	background-color: black;
-	color: white;
-	border:	none;
-	font-size:30px;
-	text-align:centre;
-	margin: 0px 0px 0px 0px;
-}
 </style>
 </head>
 <body>
-<p><ul>
-<li><a href="login.html">Login</a></li>
-<li><a href="register_mp.html">Register</a></li>
-<li><a>Mentoring System</a></li></p></ul>
+<ul>
+  
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn" onclick="myFunction()">Login</a>
+    <div class="dropdown-content" id="myDropdown">
+      <a href="#">Student</a>
+      <a href="#">CR</a>
+      <a href="#">Mentor</a>
+    </div>
+  </li>
+  <li><a href="#home">Register</a></li>
+  <li><a href="#news">About MS</a></li>
+</ul>
+
 <a href="http://www.ncuindia.edu/"><div class="logo">
 <img class="logo" src="C:\Users\Shruti\Desktop\major\ncu.jpg"></a></div>
-</div></body>
+
+<script>
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function(event) 
+{
+  if (!event.target.matches('.dropbtn')) 
+	{
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++)
+		{
+			var openDropdown = dropdowns[i];
+			if (openDropdown.classList.contains('show'))
+			{
+				openDropdown.classList.remove('show');
+			}
+		}
+	}
+}
+</script>
+
+</body>
 </html>
